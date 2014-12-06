@@ -1,12 +1,16 @@
 {
   "port": 80,
   "redirects": {
-    "localhost": {
-      "host": "http://pksunkara.github.com",
+    "tunetap.com": {
+      "host": "https://www.tunetap.com",
+      "code": 302
+    },
+    "i.tunetap.com": {
+      "host": "https://www.tunetap.com/?utm_source=inst&utm_medium=prof&utm_campaign=Ins",
       "code": 302
     },
     "*": {
-      "host": "http://www.google.com",
+      "host": "https://www.tunetap.com",
       "code": 302
     }
   }
