@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+require('../newrelic');
+
 var config = require("nconf")
 	.argv()
 	.file({file:__dirname+"/../config.json"});
