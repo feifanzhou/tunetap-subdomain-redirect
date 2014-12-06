@@ -4,5 +4,6 @@ var config = require("nconf")
 	.argv()
 	.file({file:__dirname+"/../config.json"});
 
-redirect = require('../lib/redirect')(config.get('redirects'), config.get('port'));
+var port = (process.env.NODE_ENV == 'production') ? process.env.PORT : 80
+redirect = require('../lib/redirect')(config.get('redirects'), port);
 // console.log('redirect running on port %d', redirect.address().port);
